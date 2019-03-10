@@ -1,0 +1,2 @@
+class SortingRequest < ApplicationRecord
+end
