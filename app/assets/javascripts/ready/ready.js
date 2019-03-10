@@ -1,6 +1,10 @@
 console.log("This is working");
 var vbucks = 0;
 
+function getName() {
+  return document.getElementById('name').value;
+}
+
 function addItem(id, list) {
   let container = document.createElement('p');
   container.setAttribute("id", id);
@@ -38,7 +42,7 @@ function submitSorted(id, input) {
     {
       id: id,
       sortedList: sortedList,
-      name: "todo",
+      name: getName(),
     },
     function(data, status) {
         document.getElementById("myPopup").classList.toggle("show");
