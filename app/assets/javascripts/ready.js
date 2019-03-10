@@ -1,8 +1,10 @@
 console.log("This is working");
+var vbucks = 0;
 
 function addItem(id, list) {
-  let container = document.createElement('p')
+  let container = document.createElement('p');
   container.setAttribute("id", id);
+  container.setAttribute("style", "text-align: center;");
 
   let text = document.createTextNode(list);
   container.append(text);
@@ -21,7 +23,8 @@ function addItem(id, list) {
 
   container.append(div);
 
-  document.body.append(container);
+  $("#mainContainer").append(container);
+  console.log("test");
 }
 
 function removeItem(id) {
@@ -38,7 +41,13 @@ function submitSorted(id, input) {
       name: "todo",
     },
     function(data, status) {
+        document.getElementById("myPopup").classList.toggle("show");
       removeItem(id);
+      setTimeout(function() {
+          document.getElementById("myPopup").classList.toggle("show");
+          vbucks += 1;
+          $("#vContainer").text("V-Bucks: " + vbucks + "!!!");
+      }, 1000);
     }
   );
 }
