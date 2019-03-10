@@ -5,7 +5,7 @@ class DriverController < ApplicationController
   end
 
   def create
-    @driver = Driver.create driver_params
+    @driver = Driver.find_by(name: driver_params[:name]) || Driver.create driver_params
     render :ready
   end
 
@@ -15,6 +15,7 @@ class DriverController < ApplicationController
 
   def sorted
     SortingRequest.find(params[:id]).update(sorted_list: params[:sortedList])
+    Driver.find_by(name: params[:name]).increment(:vbucks)
   end
 
 private
