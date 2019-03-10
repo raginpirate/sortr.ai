@@ -12,39 +12,4 @@
 
 ActiveRecord::Schema.define(version: 2019_03_10_151107) do
 
-  create_table "clients", force: :cascade do |t|
-    t.string "name"
-    t.string "callback_url"
-    t.string "email"
-    t.string "secret_key"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "drivers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "vbucks"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "requestable", force: :cascade do |t|
-    t.integer "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "drivers_id"
-    t.integer "clients_id"
-    t.index ["clients_id"], name: "index_requestable_on_clients_id"
-    t.index ["drivers_id"], name: "index_requestable_on_drivers_id"
-  end
-
-  create_table "sorting_requests", force: :cascade do |t|
-    t.json "unsorted_list"
-    t.json "sorted_list"
-    t.json "options"
-    t.integer "requestable_id"
-    t.index ["requestable_id"], name: "index_sorting_requests_on_requestable_id"
-  end
-
 end

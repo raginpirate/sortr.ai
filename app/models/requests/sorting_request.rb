@@ -1,0 +1,3 @@
+class SortingRequest < Request
+
+end
