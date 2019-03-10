@@ -13,16 +13,14 @@
 ActiveRecord::Schema.define(version: 2019_03_10_194229) do
 
   create_table "drivers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "name", null: false
     t.integer "vbucks", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "sorting_requests", force: :cascade do |t|
-    t.integer "status"
-    t.json "unsorted_list"
+    t.json "unsorted_list", null: false
     t.json "sorted_list"
     t.json "options"
     t.datetime "created_at", null: false
