@@ -1,7 +1,13 @@
 <% content_for :javascript_includes do %>
   <%= javascript_include_tag "ready.js" %>
 <% end %>
-
-<p>
-  Claim requests as they come through here
-</p>
+<div style="display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto; height: 75vh">
+  <h3 style="text-align: center">Uber for Sorting</h3>
+  <p class="popup" style="text-align: center; margin-top: 20px;">
+    Claim requests as they come through here
+    <span class="popuptext" id="myPopup">+10 Vbucks!</span>
+  </p>
+</div>

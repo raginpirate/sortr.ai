@@ -1,6 +1,14 @@
-<span>Welcome Driver!</span>
-<%= form_for :driver, url: {action: :create} do |f| %>
-  Name: <%= f.text_field :name %>
-
-  <%= f.submit "Log in" %>
-<% end %>
+<div style="display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto; height: 75vh">
+  <h3 style="text-align: center">Uber for Sorting</h3>
+  <span style="text-align: center">The worlds most innovative sorting algorithm.</span>
+  <p style="text-align: center; margin-top: 20px;">Signup / Login</p>
+  <%= form_for :driver, url: {action: :create} do |f| %>
+    <div style="display: flex; justify-content: center;">
+      <%= f.text_field :name, style: "border-radius: 8px;" %>
+      <%= f.submit "Start Sorting!", style: "border-radius: 8px;" %>
+    </div>
+  <% end %>
+</div>
