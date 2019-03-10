@@ -1,5 +1,4 @@
 console.log("This is working");
-var vbucks = 0;
 
 function getName() {
   return document.getElementById('name').value;
@@ -48,9 +47,9 @@ function submitSorted(id, input) {
         document.getElementById("myPopup").classList.toggle("show");
       removeItem(id);
       setTimeout(function() {
-          document.getElementById("myPopup").classList.toggle("show");
-          vbucks += 1;
-          $("#vContainer").text("V-Bucks: " + vbucks + "!!!");
+          document.getElementById("myPopup").classList.remove("show");
+          var str = $("#vContainer").text();
+          $("#vContainer").text("V-Bucks: " + (Number(str.replace("V-Bucks: ", "").replace("!!!", ""))+1) + "!!!");
       }, 1000);
     }
   );

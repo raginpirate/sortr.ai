@@ -5,10 +5,10 @@
   <h3 style="text-align: center">Uber for Sorting</h3>
   <p class="popup" style="text-align: center; margin-top: 20px;">
     Claim requests as they come through here
-    <span class="popuptext" id="myPopup">+1 Vbuck!</span>
+    <%= image_tag("V-bucks_icon.png", class: "popuptext", id: "myPopup") %>
   </p>
 </div>
  <input type="hidden" id="name" name="name" value="<%= @driver.name %>">
 <div style="position: absolute; top: 100vh; left: 100vw; margin-left: -90px; margin-top: -90px">
-  <p style="text-align: center;" id="vContainer">V-Bucks: 400!!!</p>
+  <p style="text-align: center;" id="vContainer">V-Bucks: <%= @driver.vbucks %>!!!</p>
 </div>
