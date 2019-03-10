@@ -1,5 +1,6 @@
 class DriverNotificationsChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "driver_notifications_channel"
+    puts "NICE"
+    stream_from "driver_channel"
   end
 end

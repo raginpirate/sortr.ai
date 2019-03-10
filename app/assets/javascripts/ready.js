@@ -42,17 +42,22 @@ function submitSorted(id, input) {
     }
   );
 }
-// All the action cable stuff todo
-/*
+
 var App = {};
 
-App.cable = ActionCable.createConsumer(`ws://${window.location.hostname}:28080`);
+App.cable = ActionCable.createConsumer(`ws://${window.location.hostname}:3000/cable`);
 
-App.messaging = App.cable.subscriptions.create('SomeChannel', {
-  received: function(data) {
-    $(this).trigger('received', data);
-  },
-  sendMessage: function(messageBody) {
-    this.perform('foobar', { body: messageBody, to: otherPlayerUuid });
-  }
-});*/
+App.cable.subscriptions.create('DriverNotificationsChannel', {
+   connected: function (data) {
+      console.log("ur connected and ready to go have fun buddy")
+    },
+    received: function (data) {
+      console.log(data);
+      if(data.type == 'create') {
+        addItem(data.id, data.list);
+      } else if (data.type == 'destroy') {
+        removeItem(data.id);
+      }
+    }
+});
+

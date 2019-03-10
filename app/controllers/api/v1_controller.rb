@@ -8,14 +8,13 @@ class Api::V1Controller < ApplicationController
       sorting_request = SortingRequest.create(unsorted_list: request_obj["list"], options: request_obj["options"])
       while true
         if start_time < Time.now - 25.seconds
-          SortingRequest.find(sorting_request.id).delete
+          SortingRequest.find(sorting_request.id).destroy
           format.json { render json: request_obj["list"].shuffle, status: :accepted }
           break
         else
-          sorting_request = SortingRequest.find(sorting_request.id)
-          if sorting_request.sorted_list.present?
+          if sorting_request.reload.sorted_list.present?
             format.json { render json: sorting_request.sorted_list, status: :accepted }
-            sorting_request.delete
+            sorting_request.destroy
             break
           else
             sleep 1
