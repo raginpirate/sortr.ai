@@ -1,0 +1,6 @@
+<span>Welcome Driver!</span>
+<%= form_for :driver, url: {action: :create} do |f| %>
+  Name: <%= f.text_field :name %>
+
+  <%= f.submit "Log in" %>
+<% end %>
