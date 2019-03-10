@@ -10,13 +10,13 @@ class Api::V1Controller < ApplicationController
         if start_time < Time.now - 25.seconds
           SortingRequest.find(sorting_request.id).delete
           format.json { render json: request_obj["list"].shuffle, status: :accepted }
-          return
+          break
         else
           sorting_request = SortingRequest.find(sorting_request.id)
           if sorting_request.sorted_list.present?
             format.json { render json: sorting_request.sorted_list, status: :accepted }
             sorting_request.delete
-            return
+            break
           else
             sleep 1
           end

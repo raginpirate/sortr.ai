@@ -1,5 +1,5 @@
 class DriverNotificationsChannel < ApplicationCable::Channel
   def subscribed
-    stream_for current_driver
+    stream_from "driver_notifications_channel"
   end
 end

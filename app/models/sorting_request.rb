@@ -5,7 +5,7 @@ class SortingRequest < ApplicationRecord
   private
 
   def broadcast_creation
-    Driver.broadcast_sorting_request(id)
+    Driver.broadcast_sorting_request(self)
   end
 
   def broadcast_deletion
