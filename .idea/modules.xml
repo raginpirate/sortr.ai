@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../work enviroment/bananastand/.idea/bananastand.iml" filepath="$PROJECT_DIR$/../../work enviroment/bananastand/.idea/bananastand.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../work enviroment/extra_verification/.idea/extra_verification.iml" filepath="$PROJECT_DIR$/../../work enviroment/extra_verification/.idea/extra_verification.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sortr.ai.iml" filepath="$PROJECT_DIR$/.idea/sortr.ai.iml" />
     </modules>

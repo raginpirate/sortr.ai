@@ -1,4 +1,5 @@
-class ApplicationController < ActionController
+class Api::V1Controller < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :validate_params, only: :sorting_request
   def sorting_request
     respond_to do |format|
@@ -27,6 +28,6 @@ class ApplicationController < ActionController
   private
 
   def validate_params
-    SortingRequestValidator.validate!(params[:sorting_request])
+    # SortingRequestValidator.validate!(params[:sorting_request])
   end
 end
