@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_10_162852) do
+ActiveRecord::Schema.define(version: 2019_03_10_181611) do
 
-  create_table "clients", force: :cascade do |t|
-    t.string "name"
-    t.string "callback_url"
-    t.string "email"
-    t.string "secret_key"
+  create_table "drivers", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "vbucks", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sorting_requests", force: :cascade do |t|
+    t.json "unsorted_list", null: false
+    t.json "sorted_list", null: false
+    t.json "options", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

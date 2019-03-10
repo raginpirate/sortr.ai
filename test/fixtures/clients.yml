@@ -11,3 +11,4 @@ two:
   callback_url: MyString
   email: MyString
   secret_key: MyString
+
