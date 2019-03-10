@@ -4,8 +4,8 @@ class FixRequirements < ActiveRecord::Migration[5.2]
     change_table :sorting_requests do |t|
       t.remove :status, :integer
       t.change :unsorted_list, :json, null: false
-      t.change :sorted_list, :json, null: false
-      t.change :options, :json, null: false
+      t.change :sorted_list, :json
+      t.change :options, :json
     end
 
     change_table :drivers do |t|
