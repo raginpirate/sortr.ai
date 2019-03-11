@@ -57,7 +57,7 @@ function submitSorted(id, input) {
 
 var App = {};
 
-App.cable = ActionCable.createConsumer(`ws://${window.location.hostname}:3000/cable`);
+App.cable = ActionCable.createConsumer(`ws://${window.location.hostname}/cable`);
 
 App.cable.subscriptions.create('DriverNotificationsChannel', {
    connected: function (data) {
