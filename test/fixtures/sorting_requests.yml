@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 1
+  unsorted_list: 
+  sorted_list: 
+  options: 
+
+two:
+  status: 1
+  unsorted_list: 
+  sorted_list: 
+  options: 
