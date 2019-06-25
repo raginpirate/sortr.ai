@@ -1,7 +1,7 @@
 # 🚗 sortr.ai 🚗
+Submission by Daniel Wyckoff and Owen Linton for [TerribleHackXIII](https://devpost.com/software/sortr-ai "Submission Page")
 The world's leading sorting solution.
-Its uber but for sorting.
-| Drive for us at: http://sortrai.herokuapp.com/
+Its uber but for sorting.  Drive for us at: http://sortrai.herokuapp.com/
 
 ## What does it do?
 Sortr.ai promises to deliver list sorting in O(1) time via our propriatary software.
