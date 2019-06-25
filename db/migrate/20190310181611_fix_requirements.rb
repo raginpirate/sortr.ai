@@ -9,7 +9,7 @@ class FixRequirements < ActiveRecord::Migration[5.2]
 
     change_table :drivers do |t|
       t.change :name, :string, null: false
-      t.remove :email, :string
+      t.remove :email
       t.change :vbucks, :integer, null: false
     end
   end
