@@ -1,7 +1,7 @@
-Drive for us at: http://sortrai.herokuapp.com/
 # 🚗 sortr.ai 🚗
 The world's leading sorting solution.
 Its uber but for sorting
+Drive for us at: http://sortrai.herokuapp.com/
 
 ## What does it do?
 Sortr.ai promises to deliver list sorting in O(1) time via our propriatary software.
